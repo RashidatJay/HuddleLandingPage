@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(257, 40%, 49%);
+
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 100vh;
+}
+.wrapped {
+  height: 89%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 42px 0;
+  margin: 0 1.5rem;
+}
+.header img {
+  width: 200px;
+  padding-bottom: 20px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+.texts h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+.texts p {
+  color: white;
+  font-family: "Open sans", sans-serif;
+  line-height: 1.5;
+}
+.texts a {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+
+  padding: 16px 55px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.8);
+  background-color: white;
+}
+.texts a:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: whitesmoke;
+}
+.social-buttons {
+  text-align: right;
+}
+.social-buttons a span {
+  color: white;
+  font-size: 20px;
+  position: relative;
+}
+
+.social-buttons a {
+  margin-left: 1.9rem;
+}
+.social-buttons a:first-child {
+  margin-left: 0;
+}
+.social-buttons a span::after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  bottom: -10px;
+  left: -14px;
+}
+.social-buttons a:nth-child(2) {
+  margin-left: 2.3rem;
+}
+.social-buttons a:hover span {
+  color: hsl(300, 69%, 71%);
+}
+.social-buttons a span:hover::after {
+  border: 2px solid hsl(300, 69%, 71%);
+}
+@media only screen and (max-width: 1200px) {
+  .mockup-img img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+  .social-buttons {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .texts a {
+    padding: 10px 65px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .texts a {
+    padding: 6px 10px;
+  }
+  .texts h1 {
+    font-size: 20px;
+  }
+  .texts p {
+    font-size: 13px;
+  }
+}
